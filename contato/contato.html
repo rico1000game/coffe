@@ -3,11 +3,251 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Café Aroma Secreto - Contato</title>
+  <title>Serra & Grão - Contato</title>
   <link rel="stylesheet" href="/index.css">
   <link rel="stylesheet" href="/contato/contato.css">
 </head>
 <body>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+
+  <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+
+  <h1>Fale Conosco</h1>
+
+  <form>
+    <input type="text" placeholder="Seu nome">
+
+    <input type="email" placeholder="Seu email">
+
+    <textarea placeholder="Sua mensagem"></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Café Aroma</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background-color: #f5f0ea;
+      color: #333;
+    }
+
+    header{
+      background-color: #4b2e2e;
+      padding: 20px;
+    }
+
+    nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1{
+      color: white;
+    }
+
+    nav ul{
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a{
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover{
+      color: #d4a373;
+    }
+
+    .contato{
+      padding: 50px 10%;
+    }
+
+    .contato h2{
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      color: #4b2e2e;
+    }
+
+    .contato-container{
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .formulario,
+    .info{
+      flex: 1;
+      min-width: 300px;
+    }
+
+    form{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input,
+    textarea{
+      padding: 15px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    input:hover,
+    textarea:hover{
+      border-color: #d4a373;
+    }
+
+    input:focus,
+    textarea:focus{
+      outline: none;
+      border-color: #8b5e3c;
+      box-shadow: 0 0 8px rgba(139,94,60,0.5);
+    }
+
+    textarea{
+      resize: none;
+      height: 150px;
+    }
+
+    button{
+      padding: 15px;
+      border: none;
+      background-color: #4b2e2e;
+      color: white;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover{
+      background-color: #6f4e37;
+    }
+
+    .info h3{
+      margin-bottom: 15px;
+      color: #4b2e2e;
+    }
+
+    .info p{
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    iframe{
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    footer{
+      background-color: #4b2e2e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @media(max-width: 768px){
+      .contato-container{
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>Café Aroma</h1>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Cardápio</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contato">
+
+    <h2>Entre em Contato</h2>
+
+    <div class="contato-container">
+
+      <div class="formulario">
+
+        <form>
+          <input type="text" placeholder="Seu nome">
+
+          <input type="email" placeholder="Seu email">
+
+          <textarea placeholder="Sua mensagem"></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+
+      </div>
+
+      <div class="info">
+
+        <h3>Informações</h3>
+
+        <p>📍 Rua do Café, 123 - São Paulo/SP</p>
+        <p>📞 (11) 99999-9999</p>
+        <p>☕ Atendimento: 08h às 20h</p>
+
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.162154247646!2d-46.65657168502119!3d-23.564224984682177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c85b1f7fbb%3A0x5d2fcb2a4f4e5f7b!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1699999999999"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 Café Aroma - Todos os direitos reservados.</p>
+  </footer>
 
 </body>
 </html>

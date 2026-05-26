@@ -1,136 +1,223 @@
-/* =========================================
-   ESTILOS GERAIS
-========================================= */
+/* Configurações Gerais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #fdfbf7; /* Tom de creme aconchegante */
-    color: #333;
+    background-color: #fdfaf4;
+    color: #3e342f;
     line-height: 1.6;
 }
 
+/* Cabeçalho Decorado */
 header {
-    background-color: #4a2c0f; /* Marrom Café */
-    color: white;
+    background: linear-gradient(135deg, #2b1704 0%, #4a2c0f 100%);
+    color: #f7ede2;
     text-align: center;
-    padding: 2rem 0;
-    margin-bottom: 2rem;
+    padding: 3.5rem 1rem;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border-bottom: 4px solid #d4a373;
 }
 
-/* =========================================
-   MENU.HTML (CARDÁPIO EM CARDS)
-========================================= */
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-style: italic;
+    color: #d4a373;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+.decor-line {
+    width: 60px;
+    height: 3px;
+    background-color: #d4a373;
+    margin: 1.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* Botão Voltar */
+.btn-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #f7ede2;
+    text-decoration: none;
+    font-size: 0.9rem;
+    background: rgba(255,255,255,0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn-back:hover {
+    background: #d4a373;
+    color: #2b1704;
+}
+
+/* Container do Menu */
 .menu-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 40px 20px;
 }
 
-.menu-title {
+.section-title-area {
     text-align: center;
-    margin-bottom: 2rem;
-    color: #4a2c0f;
-}
-
-/* CSS Grid Dinâmico: Ajusta de 3-4 colunas no PC para 1 coluna no celular */
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
     margin-bottom: 3rem;
 }
 
+.badge-top {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #d4a373;
+    font-weight: bold;
+}
+
+.menu-title {
+    font-size: 2.2rem;
+    color: #4a2c0f;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Grid de Cards */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    margin-bottom: 2rem;
+}
+
+/* Estilização Premium do Card */
 .card {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    text-align: center;
+    box-shadow: 0 10px 30px rgba(74, 44, 15, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    border: 1px solid rgba(74, 44, 15, 0.05);
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Efeito flutuar ao passar o mouse */
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(74, 44, 15, 0.12);
+}
+
+/* Container de Imagem com Zoom no Hover */
+.img-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
 }
 
 .card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover; /* Recorta a imagem para caber sem distorcer */
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
+.card:hover .img-container img {
+    transform: scale(1.08);
+}
+
+/* Tags dos Cards */
+.card-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(43, 23, 4, 0.85);
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(212, 163, 115, 0.4);
+    z-index: 2;
+}
+
+/* Conteúdo Interno do Card */
 .card-content {
-    padding: 1.5rem;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-content h3 {
-    margin-bottom: 0.5rem;
-    color: #d35400; /* Cor laranja/caramelo para o título do produto */
+    font-size: 1.3rem;
+    color: #2b1704;
+    margin-bottom: 0.6rem;
 }
 
 .card-content p {
     font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 1rem;
+    color: #7a6e67;
+    margin-bottom: 1.5rem;
+    min-height: 54px; /* Mantém os textos alinhados igualmente */
+}
+
+/* Rodapé do Card (Preço + Botão) */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed #f2e8cf;
+    padding-top: 1rem;
 }
 
 .price {
-    display: block;
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #d4a373;
 }
 
-/* =========================================
-   SOBRE.HTML (QUEM SOMOS)
-========================================= */
-.sobre-container {
-    max-width: 800px; /* Layout mais estreito para leitura confortável */
-    margin: 0 auto;
-    padding: 0 20px;
+.btn-order {
+    background-color: #4a2c0f;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.sobre-hero img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 2rem;
+.btn-order:hover {
+    background-color: #d4a373;
+    transform: scale(1.1);
 }
 
-.sobre-container h2 {
-    font-size: 2.5rem;
-    color: #4a2c0f;
-    margin-bottom: 1rem;
+/* Rodapé da Página */
+footer {
     text-align: center;
-}
-
-.sobre-container p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    text-align: justify; /* Texto alinhado dos dois lados */
-}
-
-.valores {
-    background-color: #f0e6d2; /* Fundo contrastante para os valores */
     padding: 2rem;
-    border-radius: 10px;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-
-.valores h3 {
-    text-align: center;
-    color: #d35400;
-    margin-bottom: 1rem;
-}
-
-.valores ul {
-    list-style-position: inside;
-    font-size: 1.1rem;
+    color: #a89f91;
+    font-size: 0.85rem;
+    background-color: #2b1704;
+    margin-top: 4rem;
 }

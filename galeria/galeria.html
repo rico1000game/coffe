@@ -3,11 +3,192 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Café Aroma Secreto - Galeria</title>
+  <title>Serra & Grão - Galeria</title>
   <link rel="stylesheet" href="/index.css">
   <link rel="stylesheet" href="/galeria/galeria.css">
 </head>
 <body>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria</title>
+
+  <link rel="stylesheet" href="galeria.css">
+</head>
+<body>
+
+  <h1>Galeria</h1>
+
+  <div class="galeria">
+
+    <img src="../img/cafe1.jpg">
+    <img src="../img/cafe2.jpg">
+    <img src="../img/cafe3.jpg">
+
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria - Café Aroma</title>
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background-color: #f5f0ea;
+    }
+
+    header{
+      background-color: #4b2e2e;
+      padding: 20px;
+    }
+
+    nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1{
+      color: white;
+    }
+
+    nav ul{
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a{
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover{
+      color: #d4a373;
+    }
+
+    .titulo{
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
+
+    .titulo h2{
+      font-size: 2.5rem;
+      color: #4b2e2e;
+    }
+
+    .galeria{
+      padding: 40px 10%;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      grid-auto-rows: 250px;
+    }
+
+    .galeria img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: 0.4s;
+      cursor: pointer;
+    }
+
+    .galeria img:hover{
+      transform: scale(1.03);
+      filter: brightness(80%);
+    }
+
+    .alta{
+      grid-row: span 2;
+    }
+
+    .larga{
+      grid-column: span 2;
+    }
+
+    footer{
+      background-color: #4b2e2e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @media(max-width: 768px){
+
+      .larga{
+        grid-column: span 1;
+      }
+
+      .alta{
+        grid-row: span 1;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>Café Aroma</h1>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Cardápio</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="titulo">
+    <h2>Nosso Ambiente</h2>
+  </section>
+
+  <section class="galeria">
+
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" class="alta">
+
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+
+    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" class="larga">
+
+    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814">
+
+    <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86" class="alta">
+
+    <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247">
+
+    <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096">
+
+  </section>
+
+  <footer>
+    <p>© 2026 Café Aroma - Todos os direitos reservados.</p>
+  </footer>
 
 </body>
 </html>

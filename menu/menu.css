@@ -1,0 +1,136 @@
+/* =========================================
+   ESTILOS GERAIS
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fdfbf7; /* Tom de creme aconchegante */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4a2c0f; /* Marrom Café */
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+/* =========================================
+   MENU.HTML (CARDÁPIO EM CARDS)
+========================================= */
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.menu-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4a2c0f;
+}
+
+/* CSS Grid Dinâmico: Ajusta de 3-4 colunas no PC para 1 coluna no celular */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito flutuar ao passar o mouse */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Recorta a imagem para caber sem distorcer */
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    margin-bottom: 0.5rem;
+    color: #d35400; /* Cor laranja/caramelo para o título do produto */
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.price {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* =========================================
+   SOBRE.HTML (QUEM SOMOS)
+========================================= */
+.sobre-container {
+    max-width: 800px; /* Layout mais estreito para leitura confortável */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sobre-hero img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.sobre-container h2 {
+    font-size: 2.5rem;
+    color: #4a2c0f;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sobre-container p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify; /* Texto alinhado dos dois lados */
+}
+
+.valores {
+    background-color: #f0e6d2; /* Fundo contrastante para os valores */
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.valores h3 {
+    text-align: center;
+    color: #d35400;
+    margin-bottom: 1rem;
+}
+
+.valores ul {
+    list-style-position: inside;
+    font-size: 1.1rem;
+}

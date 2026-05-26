@@ -1,0 +1,31 @@
+/* Estilos da Página de Galeria - Integrante 3 */
+body {
+  font-family: Arial;
+  padding: 30px;
+}
+
+.galeria {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+}

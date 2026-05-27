@@ -1,155 +1,607 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
+:root{
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+--bg:#f4f1ed;
+--white:#ffffff;
 
-<title>Contato | Serra & Grão</title>
+--dark:#2b140c;
+--brown:#b87742;
+--brown-dark:#1f0d08;
 
-<!-- FONTES -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-<!-- ÍCONES -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+html{
+scroll-behavior:smooth;
+}
 
-<link rel="stylesheet" href="contato.css">
+body{
 
-</head>
+background:var(--bg);
 
-<body>
+font-family:'Inter',sans-serif;
 
-<header>
+color:var(--dark);
 
-<nav>
+overflow-x:hidden;
 
-<div class="logo">
-<i class="fa-solid fa-mug-hot"></i>
-<h1>Serra & Grão</h1>
-</div>
+}
 
-<ul>
-<li><a href="index.html">Início</a></li>
-<li><a href="menu.html">Cardápio</a></li>
-<li><a href="sobre.html">Sobre Nós</a></li>
-<li><a href="galeria.html">Galeria</a></li>
-<li><a href="contato.html" class="active">Contato</a></li>
-</ul>
+/* HEADER */
 
-<a href="index.html" class="btn-voltar">
-← Voltar ao início
-</a>
+header{
 
-</nav>
+position:fixed;
 
-</header>
+top:0;
+left:0;
 
-<section class="hero">
+width:100%;
 
-<div class="hero-content">
+z-index:1000;
 
-<span>FALE CONOSCO</span>
+padding:28px 8%;
 
-<h2>Como podemos ajudar?</h2>
+background:rgba(20,8,4,.75);
 
-<p>
-Estamos à disposição para esclarecer dúvidas,
-receber sugestões e tornar sua experiência
-na Serra & Grão ainda mais especial.
-</p>
+backdrop-filter:blur(10px);
 
-</div>
+}
 
-</section>
+nav{
 
-<section class="contato-section">
+display:flex;
+justify-content:space-between;
+align-items:center;
 
-<div class="formulario-card">
+gap:30px;
 
-<h3>Envie uma mensagem</h3>
+}
 
-<form>
+.logo{
 
-<div class="campo">
-<label>Nome</label>
-<input type="text" placeholder="Seu nome completo">
-</div>
+display:flex;
+align-items:center;
+gap:14px;
 
-<div class="campo">
-<label>E-mail</label>
-<input type="email" placeholder="seuemail@email.com">
-</div>
+}
 
-<div class="campo">
-<label>Mensagem</label>
-<textarea rows="6" placeholder="Digite sua mensagem"></textarea>
-</div>
+.logo i{
 
-<button type="submit">
-Enviar mensagem
-</button>
+font-size:1.7rem;
+color:#d89a5d;
 
-</form>
+}
 
-</div>
+.logo h1{
 
-<div class="info-card">
+font-family:'Cormorant Garamond',serif;
 
-<h3>Visite nossa cafeteria</h3>
+font-size:2.4rem;
 
-<p class="descricao">
-Venha conhecer nosso ambiente acolhedor e experimentar cafés especiais preparados com cuidado.
-</p>
+font-weight:700;
 
-<div class="info-item">
-<i class="fa-solid fa-location-dot"></i>
-<div>
-<strong>Endereço</strong>
-<p>Shopping Parque Dom Pedro<br>Campinas - SP</p>
-</div>
-</div>
+color:white;
 
-<div class="info-item">
-<i class="fa-regular fa-clock"></i>
-<div>
-<strong>Horário</strong>
-<p>Segunda a Domingo<br>10h às 22h</p>
-</div>
-</div>
+}
 
-<div class="info-item">
-<i class="fa-solid fa-phone"></i>
-<div>
-<strong>Telefone</strong>
-<p>(19) 99999-9999</p>
-</div>
-</div>
+nav ul{
 
-<iframe
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1999660431214!2d-47.0650106!3d-22.8471992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c683e592fc29%3A0x503fbf7eb72ec1c1!2sShopping%20Parque%20Dom%20Pedro!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
-loading="lazy">
-</iframe>
+display:flex;
 
-</div>
+list-style:none;
 
-</section>
+gap:35px;
 
-<footer>
+}
 
-<div class="footer-content">
+nav a{
 
-<h3>Serra & Grão</h3>
+text-decoration:none;
 
-<p>
-Cafés especiais, doces artesanais e momentos inesquecíveis.
-</p>
+color:white;
 
-</div>
+font-weight:500;
 
-</footer>
+transition:.3s;
 
-</body>
-</html>
+}
+
+nav a:hover{
+color:#d89a5d;
+}
+
+.active{
+color:#d89a5d;
+}
+
+/* HERO */
+
+.hero{
+
+height:100vh;
+
+position:relative;
+
+display:flex;
+align-items:center;
+
+padding:0 8%;
+
+background-image:url(
+'https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1800&auto=format&fit=crop'
+);
+
+background-size:cover;
+background-position:center;
+
+}
+
+.overlay{
+
+position:absolute;
+
+inset:0;
+
+background:
+linear-gradient(
+90deg,
+rgba(0,0,0,.82),
+rgba(0,0,0,.4)
+);
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+max-width:700px;
+
+}
+
+.hero span{
+
+letter-spacing:5px;
+
+font-size:.95rem;
+
+font-weight:600;
+
+color:#d89a5d;
+
+}
+
+.hero h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:8rem;
+
+line-height:.9;
+
+margin:25px 0;
+
+color:white;
+
+}
+
+.hero p{
+
+font-size:1.3rem;
+
+line-height:1.8;
+
+max-width:600px;
+
+color:#eeeeee;
+
+margin-bottom:40px;
+
+}
+
+.hero-btn{
+
+display:inline-flex;
+
+align-items:center;
+justify-content:center;
+
+padding:18px 34px;
+
+background:var(--brown);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:999px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.hero-btn:hover{
+
+transform:translateY(-3px);
+
+background:#cf8850;
+
+}
+
+/* CONTATO */
+
+.contato-section{
+
+padding:120px 8%;
+
+display:grid;
+
+grid-template-columns:1fr 1fr 1fr;
+
+gap:30px;
+
+margin-top:-120px;
+
+position:relative;
+
+z-index:5;
+
+}
+
+/* CARDS */
+
+.formulario-card,
+.info-card{
+
+background:rgba(255,255,255,.96);
+
+backdrop-filter:blur(10px);
+
+padding:50px;
+
+border-radius:36px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.formulario-card h3,
+.info-card h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:3rem;
+
+margin-bottom:30px;
+
+}
+
+/* FORM */
+
+.campo{
+margin-bottom:25px;
+}
+
+.campo label{
+
+display:block;
+
+margin-bottom:10px;
+
+font-weight:500;
+
+}
+
+input,
+textarea{
+
+width:100%;
+
+border:none;
+
+border-bottom:2px solid #dddddd;
+
+padding:18px 0;
+
+background:transparent;
+
+font-size:1rem;
+
+font-family:'Inter',sans-serif;
+
+transition:.3s;
+
+}
+
+input:focus,
+textarea:focus{
+
+outline:none;
+
+border-color:var(--brown);
+
+}
+
+button{
+
+width:100%;
+
+border:none;
+
+background:var(--brown);
+
+color:white;
+
+padding:18px;
+
+border-radius:999px;
+
+font-size:1rem;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+margin-top:10px;
+
+}
+
+button:hover{
+
+transform:translateY(-2px);
+
+background:#cf8850;
+
+}
+
+/* IMAGEM */
+
+.imagem-card{
+
+position:relative;
+
+overflow:hidden;
+
+border-radius:36px;
+
+min-height:650px;
+
+box-shadow:
+0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.imagem-card img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+transition:.6s;
+
+}
+
+.imagem-card:hover img{
+transform:scale(1.05);
+}
+
+.imagem-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:
+linear-gradient(
+to top,
+rgba(0,0,0,.85),
+rgba(0,0,0,.15)
+);
+
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+
+padding:40px;
+
+}
+
+.imagem-overlay h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:3rem;
+
+color:white;
+
+margin-bottom:10px;
+
+}
+
+.imagem-overlay p{
+
+line-height:1.8;
+
+color:#f1f1f1;
+
+}
+
+/* INFO */
+
+.descricao{
+
+line-height:1.8;
+
+margin-bottom:35px;
+
+color:#666;
+
+}
+
+.info-item{
+
+display:flex;
+
+gap:18px;
+
+align-items:flex-start;
+
+margin-bottom:30px;
+
+}
+
+.info-item i{
+
+font-size:1.1rem;
+
+margin-top:4px;
+
+color:var(--brown);
+
+}
+
+.info-item strong{
+
+display:block;
+
+margin-bottom:5px;
+
+}
+
+.info-item p{
+
+line-height:1.6;
+
+color:#666;
+
+}
+
+iframe{
+
+width:100%;
+
+height:320px;
+
+border:none;
+
+border-radius:24px;
+
+margin-top:20px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:var(--brown-dark);
+
+padding:70px 8%;
+
+text-align:center;
+
+color:white;
+
+}
+
+.footer-content h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2.5rem;
+
+margin-bottom:10px;
+
+}
+
+.footer-content p{
+opacity:.8;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:1200px){
+
+.hero h2{
+font-size:5rem;
+}
+
+.contato-section{
+
+grid-template-columns:1fr;
+
+margin-top:0;
+
+}
+
+.imagem-card{
+min-height:500px;
+}
+
+}
+
+@media(max-width:800px){
+
+header{
+padding:20px 6%;
+}
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:20px;
+
+}
+
+.hero{
+
+padding:0 6%;
+
+height:90vh;
+
+}
+
+.hero h2{
+font-size:3.8rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.formulario-card,
+.info-card{
+padding:35px;
+}
+
+.formulario-card h3,
+.info-card h3,
+.imagem-overlay h3{
+font-size:2.2rem;
+}
+
+.frase h2{
+font-size:2.5rem;
+}
+
+}

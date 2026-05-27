@@ -1,69 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Galeria | Serra & Grão</title>
 
+<!-- FONTES -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- ÍCONES -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <link rel="stylesheet" href="galeria.css">
-<!-- Componentes Globais -->
-<link rel="stylesheet" href="../css/components/navbar.css">
-<script type="module" src="../js/components/navbar.js"></script>
+
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar scrolled" id="navbar">
-    <a href="/" class="logo">
-        <i class="fa-solid fa-mug-hot"></i>
-        <span>Serra & Grão</span>
-    </a>
-    
-    <nav class="nav-menu" id="nav-menu">
-        <a class="nav-link" href="/">Início</a>
-        <a class="nav-link" href="/menu/menu.html">Cardápio</a>
-        <a class="nav-link" href="/sobre/sobre.html">Sobre Nós</a>
-        <a class="nav-link active" href="/galeria/galeria.html">Galeria</a>
-        <a class="nav-link" href="/contato/contato.html">Contato</a>
-    </nav>
-    
-    <div class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
-        <i class="fa-solid fa-bars"></i>
-    </div>
+<header>
+
+<nav>
+
+<div class="logo">
+<i class="fa-solid fa-mug-hot"></i>
+<h1>Serra & Grão</h1>
+</div>
+
+<ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="menu.html">Cardápio</a></li>
+<li><a href="sobre.html">Sobre Nós</a></li>
+<li><a href="galeria.html" class="active">Galeria</a></li>
+<li><a href="contato.html">Contato</a></li>
+</ul>
+
+<a href="index.html" class="btn-voltar">
+← Voltar ao início
+</a>
+
+</nav>
+
 </header>
 
 <section class="hero">
+
+<div class="hero-content">
 
 <span>NOSSO AMBIENTE</span>
 
 <h2>Momentos que aquecem o dia.</h2>
 
 <p>
-Conheça um pouco da experiência Serra & Grão.
+Conheça a atmosfera da Serra & Grão:
+cafés especiais, encontros, aromas
+e experiências acolhedoras.
 </p>
+
+</div>
 
 </section>
 
 <section class="galeria">
 
-<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
-<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
-<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
-<img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814">
-<img src="https://images.unsplash.com/photo-1517705008128-361805f42e86">
-<img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247">
+<div class="foto grande">
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1400&auto=format&fit=crop">
+
+<div class="overlay">
+<h3>Cafés Artesanais</h3>
+<p>Extrações especiais feitas com precisão.</p>
+</div>
+</div>
+
+<div class="foto">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop">
+
+<div class="overlay">
+<h3>Grãos Selecionados</h3>
+</div>
+</div>
+
+<div class="foto">
+<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1200&auto=format&fit=crop">
+
+<div class="overlay">
+<h3>Momentos Únicos</h3>
+</div>
+</div>
+
+<div class="foto alta">
+<img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1200&auto=format&fit=crop">
+
+<div class="overlay">
+<h3>Ambiente Aconchegante</h3>
+</div>
+</div>
+
+<div class="foto">
+<img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=1200&auto=format&fit=crop">
+
+<div class="overlay">
+<h3>Doces Artesanais</h3>
+</div>
+</div>
+
+<div class="foto">
+<img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?q=80&w=1200&auto=format&fit=crop">
+
+<div class="overlay">
+<h3>Experiência Serra & Grão</h3>
+</div>
+</div>
+
+<div class="foto larga">
+<img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=1400&auto=format&fit=crop">
+
+<div class="overlay">
+<h3>Sabores que aproximam pessoas.</h3>
+</div>
+</div>
+
+</section>
+
+<section class="frase">
+
+<h2>
+Cada xícara carrega aroma, cuidado e momentos inesquecíveis.
+</h2>
 
 </section>
 
 <footer>
-Serra & Grão © 2026
+
+<div class="footer-content">
+
+<h3>Serra & Grão</h3>
+
+<p>
+Cafés especiais, doces artesanais e experiências acolhedoras.
+</p>
+
+</div>
+
 </footer>
 
 </body>

@@ -1,3 +1,5 @@
+class GlobalNavbar extends HTMLElement {
+
   connectedCallback() {
     this.render();
     this.setActiveLink();
@@ -32,19 +34,18 @@
     const links = this.querySelectorAll('.nav-link');
     
     links.forEach(link => {
-      // Remove class by default
+
       link.classList.remove('active');
       
       const path = link.getAttribute('data-path');
       
-      // Checa se o caminho atual exato corresponde ao link
-      // Ou se estamos na raiz (/) e o link é o de Início
       if (currentPath === path || (currentPath.endsWith('/') && path === '/')) {
         link.classList.add('active');
+
       } else if (currentPath.includes(path) && path !== '/') {
-        // Se estamos em /menu/menu.html e o path é /menu/menu.html
         link.classList.add('active');
       }
+
     });
   }
 
@@ -60,5 +61,4 @@
   }
 }
 
-// Define o novo custom element
 customElements.define('global-navbar', GlobalNavbar);

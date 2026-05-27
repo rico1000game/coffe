@@ -1,0 +1,144 @@
+/* ==========================================
+   BARRA DE NAVEGAÇÃO (NAVBAR)
+   ========================================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.8rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: var(--transition-smooth, 0.4s ease);
+}
+
+/* Estado da Navbar quando rolada */
+.navbar.scrolled {
+  padding: 1.1rem 5%;
+  background: rgba(31, 18, 13, 0.98);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--white, #fff);
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar .logo i {
+  color: var(--accent-light, #d9a05b);
+  font-size: 1.4rem;
+  transition: var(--transition-smooth, 0.4s ease);
+}
+
+.navbar .logo:hover i {
+  transform: rotate(-15deg) scale(1.15);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  transition: var(--transition-fast, 0.2s ease);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--white, #fff);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-light, #d9a05b);
+  transition: var(--transition-fast, 0.2s ease);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Botão do Menu Mobile (Hamburger) */
+.nav-toggle {
+  display: none;
+  color: var(--white, #fff);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition-fast, 0.2s ease);
+}
+
+.nav-toggle:hover {
+  color: var(--accent-light, #d9a05b);
+}
+
+/* ==========================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================== */
+
+/* Telas de Computadores Médios e Tablets (Até 992px) */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 1.5rem 5%;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--espresso-dark, #140b08);
+    flex-direction: column;
+    padding: 8rem 3rem;
+    gap: 2rem;
+    z-index: 999;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    transition: right 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  
+  .nav-menu.active {
+    right: 0;
+  }
+  
+  .nav-toggle {
+    display: block;
+    z-index: 1000;
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+  }
+}
+
+/* Dispositivos Móveis Pequenos (Até 576px) */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .navbar.scrolled {
+    padding: 0.9rem 1.5rem;
+  }
+}

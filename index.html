@@ -3,10 +3,212 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Serra & Grão - Home</title>
-  <link rel="stylesheet" href="/index.css">
+  <title>Serra & Grão - Cafeteria Especial</title>
+  
+  <!-- Fontes Premium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Componentes Globais -->
+  <link rel="stylesheet" href="./css/components/navbar.css">
+  <script type="module" src="./js/components/navbar.js"></script>
+  
+  <!-- Estilos e Scripts -->
+  <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-  <h1>Serra & Grão</h1>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <a href="/" class="logo">
+      <i class="fa-solid fa-mug-hot"></i>
+      <span>Serra & Grão</span>
+    </a>
+    
+    <nav class="nav-menu" id="nav-menu">
+      <a class="nav-link active" href="/">Início</a>
+      <a class="nav-link" href="/menu/menu.html">Cardápio</a>
+      <a class="nav-link" href="/sobre/sobre.html">Sobre Nós</a>
+      <a class="nav-link" href="/galeria/galeria.html">Galeria</a>
+      <a class="nav-link" href="/contato/contato.html">Contato</a>
+    </nav>
+    
+    <div class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main>
+    
+    <!-- TRILHO DE ANIMAÇÃO POR SCROLL (SCROLL TRACK) -->
+    <section class="scroll-track" id="scroll-track">
+      
+      <!-- CONTAINER STICKY DO CANVAS -->
+      <div class="sticky-video-wrap">
+        <canvas id="scroll-canvas"></canvas>
+      </div>
+      
+    </section>
+
+    <!-- SEÇÃO DA FILOSOFIA (ANTIGOS CARTÕES NARRATIVOS REPOSICIONADOS E ELEGANTES) -->
+    <section class="philosophy-section" id="philosophy-section">
+      <div class="section-title">
+        <span>NOSSA ESSÊNCIA</span>
+        <h2>O Caminho do Nosso Café</h2>
+        <div class="title-line"></div>
+      </div>
+      
+      <div class="philosophy-grid">
+        
+        <!-- Cartão 1: Introdução -->
+        <div class="philosophy-card scroll-reveal">
+          <span class="mini-title">✦ BEM-VINDO À SERRA & GRÃO</span>
+          <h3>Onde a natureza encontra o café especial</h3>
+          <p>Rodeada pelas montanhas, nossa cafeteria é um refúgio para quem busca saborear a essência pura do café, cultivado com respeito e servido com arte.</p>
+        </div>
+
+        <!-- Cartão 2: Colheita Seletiva -->
+        <div class="philosophy-card scroll-reveal">
+          <span class="mini-title">✦ GRÃOS SELECIONADOS</span>
+          <h3>Cultivado com Alma</h3>
+          <p>Selecionamos cada cereja de café manualmente nas maiores altitudes da serra. Apenas os frutos perfeitos entram em nossa torrefação para garantir uma xícara sem defeitos.</p>
+        </div>
+
+        <!-- Cartão 3: Torra Artesanal -->
+        <div class="philosophy-card scroll-reveal">
+          <span class="mini-title">✦ TORRA ARTESANAL</span>
+          <h3>Ciência & Sensibilidade</h3>
+          <p>Controlamos a temperatura e o fluxo de ar em tempo real para desenvolver perfis aromáticos únicos. Notas de chocolate, caramelo e frutas silvestres ganham vida.</p>
+        </div>
+
+        <!-- Cartão 4: A Experiência -->
+        <div class="philosophy-card scroll-reveal">
+          <span class="mini-title">✦ A EXPERIÊNCIA COMPLETA</span>
+          <h3>Do Grão à Xícara</h3>
+          <p>Cada extração é feita por baristas apaixonados. Seja um espresso denso ou um coado delicado, cada gole é uma viagem sensorial que conecta você com a terra.</p>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- SEÇÃO DE CONTEÚDO ADICIONAL (FADE-IN APÓS O VÍDEO) -->
+    <section class="landing-content" id="landing-content">
+      
+      <!-- Destaques do Cardápio -->
+      <div class="menu-highlights">
+        <div class="section-title">
+          <span>EXPERIMENTE NOSSOS CAMPEÕES</span>
+          <h2>Destaques do Cardápio</h2>
+          <div class="title-line"></div>
+        </div>
+        
+        <div class="cards-grid">
+          
+          <div class="card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1200&auto=format&fit=crop" alt="Expresso Duplo">
+              <div class="badge">Mais Pedido</div>
+            </div>
+            <div class="card-content">
+              <h3>Expresso Duplo</h3>
+              <p>Café intenso, encorpado e preparado com grãos 100% arábica de torra recente.</p>
+              <div class="card-footer">
+                <span class="price">R$ 8,00</span>
+                <a href="/menu/menu.html" class="action-btn">Ver Cardápio →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=1200&auto=format&fit=crop" alt="Cappuccino Italiano">
+              <div class="badge">Cremoso</div>
+            </div>
+            <div class="card-content">
+              <h3>Cappuccino Italiano</h3>
+              <p>O equilíbrio perfeito entre espresso, leite vaporizado e uma espuma densa.</p>
+              <div class="card-footer">
+                <span class="price">R$ 12,00</span>
+                <a href="/menu/menu.html" class="action-btn">Ver Cardápio →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop" alt="Latte Artesanal">
+              <div class="badge">Especial</div>
+            </div>
+            <div class="card-content">
+              <h3>Latte Artesanal</h3>
+              <p>Espresso suave com leite cremoso finalizado com uma bela arte dos nossos baristas.</p>
+              <div class="card-footer">
+                <span class="price">R$ 14,00</span>
+                <a href="/menu/menu.html" class="action-btn">Ver Cardápio →</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Atalhos Rápidos para outras seções -->
+      <div class="shortcuts-section">
+        <div class="shortcuts-grid">
+          
+          <a href="/sobre/sobre.html" class="shortcut-card">
+            <div class="shortcut-bg" style="background-image: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="shortcut-overlay"></div>
+            <div class="shortcut-content">
+              <i class="fa-solid fa-book-open"></i>
+              <h3>Nossa História</h3>
+              <p>Descubra as pessoas, a dedicação e a paixão por trás do Serra & Grão.</p>
+              <span class="learn-more">Conhecer →</span>
+            </div>
+          </a>
+
+          <a href="/galeria/galeria.html" class="shortcut-card">
+            <div class="shortcut-bg" style="background-image: url('https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="shortcut-overlay"></div>
+            <div class="shortcut-content">
+              <i class="fa-solid fa-images"></i>
+              <h3>Nosso Espaço</h3>
+              <p>Visite nossa galeria e sinta o aconchego do nosso ambiente de montanha.</p>
+              <span class="learn-more">Explorar →</span>
+            </div>
+          </a>
+
+          <a href="/contato/contato.html" class="shortcut-card">
+            <div class="shortcut-bg" style="background-image: url('https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="shortcut-overlay"></div>
+            <div class="shortcut-content">
+              <i class="fa-solid fa-location-dot"></i>
+              <h3>Visite-nos</h3>
+              <p>Veja onde estamos localizados e planeje seu café perfeito de hoje.</p>
+              <span class="learn-more">Como Chegar →</span>
+            </div>
+          </a>
+          
+        </div>
+      </div>
+      
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <h2>Serra & Grão</h2>
+    <p>Onde cada xícara conta uma nova história de afeto.</p>
+    <p class="copyright">Serra & Grão © 2026 • Todos os direitos reservados</p>
+  </footer>
+
+  <!-- Carregamento Modular de Scripts -->
+  <script type="module" src="/js/main.js"></script>
 </body>
 </html>
+  

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
     <meta charset="UTF-8">
@@ -15,72 +16,70 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <!-- Componentes Globais -->
+    <link rel="stylesheet" href="../css/components/navbar.css">
+    <script type="module" src="../js/components/navbar.js"></script>
 </head>
 
 <body>
 
-<header class="navbar">
-
-    <div class="logo">
-
+<!-- NAVBAR -->
+<header class="navbar scrolled" id="navbar">
+    <a href="/" class="logo">
         <i class="fa-solid fa-mug-hot"></i>
         <span>Serra & Grão</span>
-
-    </div>
-
-    <nav>
-
-        <a class="active" href="#">Início</a>
-        <a href="#">Cardápio</a>
-        <a href="../sobre/sobre.html">Sobre Nós</a>
-        <a href="#">Contato</a>
-
-    </nav>
-
-    <a href="../index.html" class="back-button">
-
-        ← Voltar ao início
-
     </a>
-
+    
+    <nav class="nav-menu" id="nav-menu">
+        <a class="nav-link" href="/">Início</a>
+        <a class="nav-link active" href="/menu/menu.html">Cardápio</a>
+        <a class="nav-link" href="/sobre/sobre.html">Sobre Nós</a>
+        <a class="nav-link" href="/galeria/galeria.html">Galeria</a>
+        <a class="nav-link" href="/contato/contato.html">Contato</a>
+    </nav>
+    
+    <div class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+    </div>
 </header>
 
 <section class="hero">
 
-    <div class="hero-text">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
 
         <span class="mini-title">
 
-            ❤ FEITO COM AMOR
+            ✦ CAFETERIA ARTESANAL
 
         </span>
 
         <h1>
 
-            Sabores que
-            acalmam a alma.
+            Nosso
+            Cardápio
 
         </h1>
 
         <p>
 
-            Cafés especiais e doces artesanais preparados
-            para transformar o seu momento.
+            Cafés especiais, doces artesanais e sabores preparados
+            para tornar o seu momento ainda mais especial.
 
         </p>
 
         <div class="hero-buttons">
 
-            <a href="#menu" class="btn-primary">
+            <a href="#cafes" class="btn-primary">
 
-                Ver Cardápio ↓
+                Ver Cafés
 
             </a>
 
-            <a href="../sobre/sobre.html" class="btn-secondary">
+            <a href="#doces" class="btn-secondary">
 
-                Nossa História ☕
+                Ver Doces
 
             </a>
 
@@ -88,27 +87,17 @@
 
     </div>
 
-    <div class="hero-image">
-
-        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=80">
-
-    </div>
-
 </section>
 
-<section class="menu-section" id="menu">
+<section class="menu-wrapper">
 
-    <div class="section-header">
+    <div class="menu-title">
 
-        <span>
+        <span>— CAFÉS ESPECIAIS —</span>
 
-            — SELEÇÃO ESPECIAL —
+        <h2 id="cafes">
 
-        </span>
-
-        <h2>
-
-            Os mais pedidos
+            Cafés Quentes
 
         </h2>
 
@@ -120,10 +109,12 @@
 
             <div class="card-image">
 
-                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1200&q=80">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1200&auto=format&fit=crop">
 
                 <div class="badge">
+
                     Mais Pedido
+
                 </div>
 
             </div>
@@ -133,17 +124,21 @@
                 <h3>Expresso Duplo</h3>
 
                 <p>
-                    Feito com grãos selecionados do cerrado mineiro.
+                    Café intenso preparado com grãos especiais.
                 </p>
 
                 <div class="card-footer">
 
                     <span class="price">
+
                         R$ 8,00
+
                     </span>
 
                     <button class="plus-btn">
+
                         +
+
                     </button>
 
                 </div>
@@ -156,10 +151,12 @@
 
             <div class="card-image">
 
-                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=1200&q=80">
+                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=1200&auto=format&fit=crop">
 
                 <div class="badge">
-                    Exclusivo
+
+                    Cremoso
+
                 </div>
 
             </div>
@@ -175,11 +172,15 @@
                 <div class="card-footer">
 
                     <span class="price">
+
                         R$ 12,00
+
                     </span>
 
                     <button class="plus-btn">
+
                         +
+
                     </button>
 
                 </div>
@@ -192,10 +193,74 @@
 
             <div class="card-image">
 
-                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop">
 
                 <div class="badge">
+
+                    Especial
+
+                </div>
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>Latte Artesanal</h3>
+
+                <p>
+                    Café suave com leite cremoso e arte especial.
+                </p>
+
+                <div class="card-footer">
+
+                    <span class="price">
+
+                        R$ 14,00
+
+                    </span>
+
+                    <button class="plus-btn">
+
+                        +
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="menu-wrapper">
+
+    <div class="menu-title">
+
+        <span>— DOCES DA CASA —</span>
+
+        <h2 id="doces">
+
+            Doces & Padaria
+
+        </h2>
+
+    </div>
+
+    <div class="cards-grid">
+
+        <div class="card">
+
+            <div class="card-image">
+
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200&auto=format&fit=crop">
+
+                <div class="badge">
+
                     Doce do Dia
+
                 </div>
 
             </div>
@@ -211,11 +276,15 @@
                 <div class="card-footer">
 
                     <span class="price">
+
                         R$ 15,00
+
                     </span>
 
                     <button class="plus-btn">
+
                         +
+
                     </button>
 
                 </div>
@@ -228,17 +297,19 @@
 
             <div class="card-image">
 
-                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop">
 
                 <div class="badge">
+
                     Artesanal
+
                 </div>
 
             </div>
 
             <div class="card-content">
 
-                <h3>Croissant Amanteigado</h3>
+                <h3>Croissant Francês</h3>
 
                 <p>
                     Crocante por fora e macio por dentro.
@@ -247,11 +318,57 @@
                 <div class="card-footer">
 
                     <span class="price">
+
                         R$ 10,00
+
                     </span>
 
                     <button class="plus-btn">
+
                         +
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-image">
+
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1200&auto=format&fit=crop">
+
+                <div class="badge">
+
+                    Gelado
+
+                </div>
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>Frappuccino</h3>
+
+                <p>
+                    Bebida gelada cremosa com chantilly especial.
+                </p>
+
+                <div class="card-footer">
+
+                    <span class="price">
+
+                        R$ 18,00
+
+                    </span>
+
+                    <button class="plus-btn">
+
+                        +
+
                     </button>
 
                 </div>
@@ -275,7 +392,7 @@
         </h3>
 
         <p>
-            Qualidade em cada xícara
+            Qualidade premium em cada xícara.
         </p>
 
     </div>
@@ -289,7 +406,7 @@
         </h3>
 
         <p>
-            Receitas com carinho
+            Receitas preparadas com carinho.
         </p>
 
     </div>
@@ -303,7 +420,7 @@
         </h3>
 
         <p>
-            Sinta-se em casa
+            Um espaço confortável para relaxar.
         </p>
 
     </div>
@@ -313,11 +430,15 @@
 <footer>
 
     <h2>
+
         Serra & Grão
+
     </h2>
 
     <p>
+
         Onde cada café cria uma nova história.
+
     </p>
 
 </footer>
@@ -340,7 +461,7 @@ buttons.forEach(button => {
 
             button.classList.remove('active');
 
-        }, 1200);
+        }, 1000);
 
     });
 

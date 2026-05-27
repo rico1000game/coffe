@@ -4,312 +4,104 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contato - Serra & Grão</title>
+<title>Contato | Serra & Grão</title>
 
-<!-- FONTES -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-<!-- ÍCONES -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-<style>
-
-:root{
-  --preto:#121212;
-  --cafe:#5a3a2e;
-  --cafe-claro:#7a5a45;
-  --bege:#f3ede7;
-  --dourado:#c9a46a;
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  font-family:'Inter', sans-serif;
-  background:var(--bege);
-  color:#222;
-}
-
-/* TIPOGRAFIA */
-h1,h2,h3{
-  font-family:'Playfair Display', serif;
-}
-
-/* HEADER */
-header{
-  background:var(--preto);
-  padding:20px 10%;
-}
-
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-nav h1{
-  color:white;
-  font-size:1.6rem;
-}
-
-nav ul{
-  display:flex;
-  list-style:none;
-  gap:25px;
-}
-
-nav a{
-  color:white;
-  text-decoration:none;
-  font-size:0.9rem;
-  transition:0.3s;
-}
-
-nav a:hover{
-  color:var(--dourado);
-}
-
-/* TÍTULO */
-.contato{
-  padding:70px 10%;
-}
-
-.contato h2{
-  text-align:center;
-  font-size:2.6rem;
-  margin-bottom:40px;
-  color:var(--preto);
-}
-
-/* LAYOUT */
-.container{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-}
-
-/* BOX */
-.box{
-  background:white;
-  padding:30px;
-  border-radius:16px;
-  box-shadow:0 15px 30px rgba(0,0,0,0.08);
-}
-
-/* FORM */
-input,textarea{
-  width:100%;
-  padding:14px;
-  margin-top:12px;
-  border-radius:10px;
-  border:1px solid #ddd;
-  font-family:'Inter';
-  transition:0.3s;
-}
-
-input:focus,textarea:focus{
-  border-color:var(--dourado);
-  outline:none;
-}
-
-button{
-  margin-top:15px;
-  width:100%;
-  padding:14px;
-  border:none;
-  border-radius:10px;
-  background:var(--cafe);
-  color:white;
-  font-weight:500;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-button:hover{
-  background:var(--cafe-claro);
-  transform:translateY(-2px);
-}
-
-/* LOCALIZAÇÃO */
-.location-card{
-  display:flex;
-  align-items:center;
-  gap:15px;
-  padding:15px;
-  margin:15px 0;
-  border:1px solid #eee;
-  border-radius:12px;
-  transition:0.3s;
-}
-
-.location-card:hover{
-  transform:translateY(-2px);
-  box-shadow:0 10px 20px rgba(0,0,0,0.08);
-}
-
-.pin{
-  width:42px;
-  height:42px;
-  border-radius:50%;
-  background:var(--cafe);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.pin .material-icons{
-  color:white;
-  font-size:22px;
-}
-
-.location-text strong{
-  display:block;
-  font-size:1rem;
-}
-
-.location-text p{
-  font-size:0.9rem;
-  color:#555;
-}
-
-.location-text span{
-  font-size:0.8rem;
-  color:#888;
-}
-
-/* INFO ITEM */
-.info-item{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin:12px 0;
-  font-size:0.95rem;
-}
-
-.material-icons{
-  font-size:20px;
-  color:var(--cafe);
-}
-
-/* MAPA */
-iframe{
-  width:100%;
-  height:220px;
-  border:none;
-  border-radius:14px;
-  margin-top:15px;
-}
-
-/* FOOTER */
-footer{
-  background:var(--preto);
-  color:white;
-  text-align:center;
-  padding:20px;
-  margin-top:60px;
-  font-size:0.9rem;
-}
-
-/* RESPONSIVO */
-@media(max-width:768px){
-  .container{
-    grid-template-columns:1fr;
-  }
-
-  nav{
-    flex-direction:column;
-    gap:10px;
-  }
-
-  nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-}
-
-</style>
+<link rel="stylesheet" href="contato.css">
+<!-- Componentes Globais -->
+<link rel="stylesheet" href="../css/components/navbar.css">
+<script type="module" src="../js/components/navbar.js"></script>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
-  <nav>
-    <h1>Serra & Grão</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="menu.html">Cardápio</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="galeria.html">Galeria</a></li>
-      <li><a href="contato.html">Contato</a></li>
-    </ul>
-  </nav>
+<!-- NAVBAR -->
+<header class="navbar scrolled" id="navbar">
+    <a href="/" class="logo">
+        <i class="fa-solid fa-mug-hot"></i>
+        <span>Serra & Grão</span>
+    </a>
+    
+    <nav class="nav-menu" id="nav-menu">
+        <a class="nav-link" href="/">Início</a>
+        <a class="nav-link" href="/menu/menu.html">Cardápio</a>
+        <a class="nav-link" href="/sobre/sobre.html">Sobre Nós</a>
+        <a class="nav-link" href="/galeria/galeria.html">Galeria</a>
+        <a class="nav-link active" href="/contato/contato.html">Contato</a>
+    </nav>
+    
+    <div class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+    </div>
 </header>
 
-<!-- CONTEÚDO -->
-<section class="contato">
+<section class="hero">
 
-<h2>Contato</h2>
+<div class="hero-text">
+<span>FALE CONOSCO</span>
 
-<div class="container">
+<h2>Vamos tomar um café juntos.</h2>
 
-  <!-- FORM -->
-  <div class="box">
-    <h3>Envie uma mensagem</h3>
+<p>
+Tem alguma dúvida, sugestão ou deseja reservar um espaço?
+Entre em contato com nossa equipe.
+</p>
+</div>
 
-    <input type="text" placeholder="Nome completo">
-    <input type="email" placeholder="E-mail">
-    <textarea rows="5" placeholder="Escreva sua mensagem"></textarea>
+</section>
 
-    <button>Enviar</button>
-  </div>
+<section class="contato-container">
 
-  <!-- LOCALIZAÇÃO -->
-  <div class="box">
+<div class="card">
 
-    <h3>Localização</h3>
+<h3>Envie uma mensagem</h3>
 
-    <div class="location-card">
+<form>
 
-      <div class="pin">
-        <span class="material-icons">location_on</span>
-      </div>
+<input type="text" placeholder="Seu nome">
 
-      <div class="location-text">
-        <strong>Serra & Grão</strong>
-        <p>Shopping Parque Dom Pedro</p>
-        <span>Campinas - SP</span>
-      </div>
+<input type="email" placeholder="Seu e-mail">
 
-    </div>
+<textarea rows="6" placeholder="Sua mensagem"></textarea>
 
-    <div class="info-item">
-      <span class="material-icons">schedule</span>
-      10h às 22h
-    </div>
+<button type="submit">
+Enviar mensagem
+</button>
 
-    <!-- MAPA REAL (DOM PEDRO CAMPINAS) -->
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1999660431214!2d-47.0650106!3d-22.8471992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c683e592fc29%3A0x503fbf7eb72ec1c1!2sShopping%20Parque%20Dom%20Pedro!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
-      loading="lazy">
-    </iframe>
+</form>
 
-  </div>
+</div>
+
+<div class="card">
+
+<h3>Onde estamos</h3>
+
+<p>
+📍 Shopping Parque Dom Pedro<br>
+Campinas - SP
+</p>
+
+<p>
+🕒 Segunda a Domingo<br>
+10h às 22h
+</p>
+
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1999660431214!2d-47.0650106!3d-22.8471992"
+allowfullscreen=""
+loading="lazy">
+</iframe>
 
 </div>
 
 </section>
 
-<!-- FOOTER -->
 <footer>
-  Serra & Grão © 2026
+<p>Serra & Grão © 2026</p>
 </footer>
 
 </body>

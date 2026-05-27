@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Galeria - Serra & Grão</title>
+<title>Galeria | Serra & Grão</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,41 +12,58 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="galeria.css">
+<!-- Componentes Globais -->
+<link rel="stylesheet" href="../css/components/navbar.css">
+<script type="module" src="../js/components/navbar.js"></script>
 </head>
 
 <body>
 
-<header>
-  <nav>
-    <h1>Serra & Grão</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="menu.html">Cardápio</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="galeria.html">Galeria</a></li>
-      <li><a href="contato.html">Contato</a></li>
-    </ul>
-  </nav>
+<!-- NAVBAR -->
+<header class="navbar scrolled" id="navbar">
+    <a href="/" class="logo">
+        <i class="fa-solid fa-mug-hot"></i>
+        <span>Serra & Grão</span>
+    </a>
+    
+    <nav class="nav-menu" id="nav-menu">
+        <a class="nav-link" href="/">Início</a>
+        <a class="nav-link" href="/menu/menu.html">Cardápio</a>
+        <a class="nav-link" href="/sobre/sobre.html">Sobre Nós</a>
+        <a class="nav-link active" href="/galeria/galeria.html">Galeria</a>
+        <a class="nav-link" href="/contato/contato.html">Contato</a>
+    </nav>
+    
+    <div class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+    </div>
 </header>
 
 <section class="hero">
-  <h2>Galeria</h2>
-  <p>Momentos na Serra & Grão</p>
+
+<span>NOSSO AMBIENTE</span>
+
+<h2>Momentos que aquecem o dia.</h2>
+
+<p>
+Conheça um pouco da experiência Serra & Grão.
+</p>
+
 </section>
 
 <section class="galeria">
 
-  <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
-  <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
-  <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
-  <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814">
-  <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86">
-  <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247">
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+<img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814">
+<img src="https://images.unsplash.com/photo-1517705008128-361805f42e86">
+<img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247">
 
 </section>
 
 <footer>
-  Serra & Grão © 2026
+Serra & Grão © 2026
 </footer>
 
 </body>

@@ -271,6 +271,8 @@ flex-direction:column;
 
 gap:35px;
 
+transform:translateY(40px); /* Alinha o topo com a imagem lateral */
+
 }
 
 /* CARDS */
@@ -573,6 +575,10 @@ margin-top:0;
 
 }
 
+.contato-coluna{
+transform:none; /* Reseta o deslocamento em dispositivos móveis */
+}
+
 .imagem-card{
 
 min-height:500px;
@@ -631,3 +637,52 @@ font-size:2.2rem;
 }
 
 }
+
+/* Classes para as mensagens de feedback premium */
+.form-feedback {
+    margin-top: 24px;
+    padding: 16px 20px;
+    border-radius: 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    display: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    backdrop-filter: blur(8px);
+}
+
+.form-feedback.sucesso {
+    background-color: rgba(220, 237, 224, 0.7); /* Verde pastel suave */
+    color: #1e5c2d;
+    border: 1px solid rgba(30, 92, 45, 0.15);
+}
+
+.form-feedback.erro {
+    background-color: rgba(251, 228, 228, 0.7); /* Vermelho pastel suave */
+    color: #9c2424;
+    border: 1px solid rgba(156, 36, 36, 0.15);
+}
+
+/* Animação suave para exibição do feedback */
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Animação do Spinner caso use Font Awesome para o ícone de carregamento */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.fa-spin {
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}   

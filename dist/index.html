@@ -13,21 +13,23 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
+  <!-- Componentes Globais -->
+  
   <!-- Estilos e Scripts -->
-  <script type="module" crossorigin src="/assets/index-DzUeLMP6.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BSxUmvJi.css">
+  <script type="module" crossorigin src="/assets/index-CngvlmwC.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-EtTU8j6m.css">
 </head>
 <body>
 
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
-    <div class="logo">
+    <a href="/" class="logo">
       <i class="fa-solid fa-mug-hot"></i>
       <span>Serra & Grão</span>
-    </div>
+    </a>
     
     <nav class="nav-menu" id="nav-menu">
-      <a class="nav-link active" href="#">Início</a>
+      <a class="nav-link active" href="/">Início</a>
       <a class="nav-link" href="/menu/menu.html">Cardápio</a>
       <a class="nav-link" href="/sobre/sobre.html">Sobre Nós</a>
       <a class="nav-link" href="/galeria/galeria.html">Galeria</a>
@@ -52,44 +54,69 @@
       
     </section>
 
-    <!-- SEÇÃO DA FILOSOFIA (ANTIGOS CARTÕES NARRATIVOS REPOSICIONADOS E ELEGANTES) -->
+    <!-- SEÇÃO DA FILOSOFIA CINEMÁTICA (VÍDEO DE FUNDO COM CARTÕES FLUTUANTES) -->
     <section class="philosophy-section" id="philosophy-section">
-      <div class="section-title">
-        <span>NOSSA ESSÊNCIA</span>
-        <h2>O Caminho do Nosso Café</h2>
-        <div class="title-line"></div>
-      </div>
       
-      <div class="philosophy-grid">
-        
-        <!-- Cartão 1: Introdução -->
-        <div class="philosophy-card scroll-reveal">
-          <span class="mini-title">✦ BEM-VINDO À SERRA & GRÃO</span>
-          <h3>Onde a natureza encontra o café especial</h3>
-          <p>Rodeada pelas montanhas, nossa cafeteria é um refúgio para quem busca saborear a essência pura do café, cultivado com respeito e servido com arte.</p>
-        </div>
+      <!-- Vídeo de Fundo Imersivo -->
+      <div class="philosophy-video-bg">
+        <div class="video-overlay-dark"></div>
+        <video autoplay loop muted playsinline>
+          <source src="/assets/mp_-COs0aOAB.mp4" type="video/mp4">
+          Seu navegador não suporta a reprodução de vídeos HTML5.
+        </video>
+      </div>
 
-        <!-- Cartão 2: Colheita Seletiva -->
-        <div class="philosophy-card scroll-reveal">
-          <span class="mini-title">✦ GRÃOS SELECIONADOS</span>
-          <h3>Cultivado com Alma</h3>
-          <p>Selecionamos cada cereja de café manualmente nas maiores altitudes da serra. Apenas os frutos perfeitos entram em nossa torrefação para garantir uma xícara sem defeitos.</p>
-        </div>
-
-        <!-- Cartão 3: Torra Artesanal -->
-        <div class="philosophy-card scroll-reveal">
-          <span class="mini-title">✦ TORRA ARTESANAL</span>
-          <h3>Ciência & Sensibilidade</h3>
-          <p>Controlamos a temperatura e o fluxo de ar em tempo real para desenvolver perfis aromáticos únicos. Notas de chocolate, caramelo e frutas silvestres ganham vida.</p>
-        </div>
-
-        <!-- Cartão 4: A Experiência -->
-        <div class="philosophy-card scroll-reveal">
-          <span class="mini-title">✦ A EXPERIÊNCIA COMPLETA</span>
-          <h3>Do Grão à Xícara</h3>
-          <p>Cada extração é feita por baristas apaixonados. Seja um espresso denso ou um coado delicado, cada gole é uma viagem sensorial que conecta você com a terra.</p>
+      <!-- Conteúdo Sobreposto -->
+      <div class="philosophy-content-wrap">
+        <div class="section-title text-light">
+          <span>NOSSA ESSÊNCIA</span>
+          <h2>O Caminho do Nosso Café</h2>
+          <div class="title-line"></div>
         </div>
         
+        <div class="philosophy-grid-3cols">
+          <!-- Coluna Esquerda -->
+          <div class="grid-side-col">
+            <!-- Cartão 1: Introdução -->
+            <div class="philosophy-card glass-card scroll-reveal">
+              <span class="mini-title">✦ BEM-VINDO À SERRA & GRÃO</span>
+              <h3>Onde a natureza encontra o café especial</h3>
+              <p>Rodeada pelas montanhas, nossa cafeteria é um refúgio para quem busca saborear a essência pura do café, cultivado com respeito e servido com arte.</p>
+            </div>
+
+            <!-- Cartão 2: Colheita Seletiva -->
+            <div class="philosophy-card glass-card scroll-reveal">
+              <span class="mini-title">✦ GRÃOS SELECIONADOS</span>
+              <h3>Cultivado com Alma</h3>
+              <p>Selecionamos cada cereja de café manualmente nas maiores altitudes da serra. Apenas os frutos perfeitos entram em nossa torrefação para garantir uma xícara sem defeitos.</p>
+            </div>
+          </div>
+
+          <!-- Coluna Central: Vazia para evidenciar os movimentos centrais do vídeo de fundo -->
+          <div class="grid-center-spacer">
+            <div class="scroll-badge animate-pulse">
+              <i class="fa-solid fa-mug-hot"></i>
+              <span>Sensações da Serra</span>
+            </div>
+          </div>
+
+          <!-- Coluna Direita -->
+          <div class="grid-side-col">
+            <!-- Cartão 3: Torra Artesanal -->
+            <div class="philosophy-card glass-card scroll-reveal">
+              <span class="mini-title">✦ TORRA ARTESANAL</span>
+              <h3>Ciência & Sensibilidade</h3>
+              <p>Controlamos a temperatura e o fluxo de ar em tempo real para desenvolver perfis aromáticos únicos. Notas de chocolate, caramelo e frutas silvestres ganham vida.</p>
+            </div>
+
+            <!-- Cartão 4: A Experiência -->
+            <div class="philosophy-card glass-card scroll-reveal">
+              <span class="mini-title">✦ A EXPERIÊNCIA COMPLETA</span>
+              <h3>Do Grão à Xícara</h3>
+              <p>Cada extração é feita por baristas apaixonados. Seja um espresso denso ou um coado delicado, cada gole é uma viagem sensorial que conecta você com a terra.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

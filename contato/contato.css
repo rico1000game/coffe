@@ -241,19 +241,35 @@ background:#cf8850;
 
 .contato-section{
 
-padding:120px 8%;
+width:100%;
+
+padding:140px 8%;
 
 display:grid;
 
-grid-template-columns:1fr 1fr 1fr;
+grid-template-columns:1.1fr .9fr;
 
-gap:30px;
-
-margin-top:-120px;
+gap:60px;
 
 position:relative;
 
+margin-top:-140px;
+
 z-index:5;
+
+align-items:start;
+
+}
+
+/* COLUNA */
+
+.contato-coluna{
+
+display:flex;
+
+flex-direction:column;
+
+gap:35px;
 
 }
 
@@ -266,13 +282,17 @@ background:rgba(255,255,255,.96);
 
 backdrop-filter:blur(10px);
 
-padding:50px;
+padding:60px;
 
 border-radius:36px;
 
 box-shadow:
 0 15px 40px rgba(0,0,0,.08);
 
+}
+
+.info-card{
+padding:45px 50px;
 }
 
 .formulario-card h3,
@@ -376,7 +396,11 @@ overflow:hidden;
 
 border-radius:36px;
 
-min-height:650px;
+height:100%;
+
+min-height:900px;
+
+transform:translateY(40px);
 
 box-shadow:
 0 20px 40px rgba(0,0,0,.12);
@@ -543,12 +567,18 @@ font-size:5rem;
 
 grid-template-columns:1fr;
 
+gap:35px;
+
 margin-top:0;
 
 }
 
 .imagem-card{
+
 min-height:500px;
+
+transform:none;
+
 }
 
 }
@@ -598,10 +628,6 @@ padding:35px;
 .info-card h3,
 .imagem-overlay h3{
 font-size:2.2rem;
-}
-
-.frase h2{
-font-size:2.5rem;
 }
 
 }
